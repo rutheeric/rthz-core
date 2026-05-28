@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0b0d13;
+    background-color: #060913; /* Fundo ligeiramente mais escuro e azulado para contraste */
     color: #f3f4f6;
     min-height: 100vh;
     display: flex;
@@ -17,25 +17,25 @@ body {
     position: relative;
 }
 
-/* GRADIENTES DE FUNDO (ORBITS) */
+/* GRADIENTES DE FUNDO (ORBITS) - Tons de Azul Moderno */
 .bg-glow {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(140px);
     z-index: 1;
-    opacity: 0.4;
+    opacity: 0.35;
 }
 .blob-1 {
-    background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 100%);
-    top: 10%;
-    left: 15%;
+    background: radial-gradient(circle, #0052ff 0%, #002575 100%); /* Azul Royal Puro */
+    top: -5%;
+    left: 10%;
 }
 .blob-2 {
-    background: radial-gradient(circle, #8b5cf6 0%, #6d28d9 100%);
-    bottom: 15%;
-    right: 15%;
+    background: radial-gradient(circle, #00d2ff 0%, #0052ff 100%); /* Azul Ciano Neon */
+    bottom: 10%;
+    right: 10%;
 }
 
 /* CONTAINER PRINCIPAL */
@@ -44,7 +44,7 @@ body {
     z-index: 2;
     width: 100%;
     max-width: 900px;
-    padding: 40px 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -56,113 +56,122 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 .avatar {
-    width: 80px;
-    height: 80px;
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #0052ff, #00d2ff); /* Gradiente nos tons do tema */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 82, 255, 0.2);
 }
 .profile-header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: -0.5px;
-    background: linear-gradient(180deg, #ffffff 0%, #a3a3a3 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .subtitle {
-    color: #9ca3af;
+    color: #94a3b8;
     font-size: 0.95rem;
     font-weight: 300;
 }
 .status-badge {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 82, 255, 0.06);
+    color: #38bdf8;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(4px);
+    font-weight: 500;
+    border: 1px solid rgba(0, 82, 255, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 /* GRID & GLASSMORPHISM CORE */
 .systems-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.01); /* Transparência de alta fidelidade */
+    backdrop-filter: blur(24px) saturate(190%);
+    -webkit-backdrop-filter: blur(24px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.06); /* Borda fina para refração de luz */
     border-radius: 24px;
-    padding: 24px;
+    padding: 28px;
     display: flex;
     gap: 20px;
     align-items: flex-start;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Animação estilo iOS (ease-out-expo) */
+    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* INTERAÇÃO / HOVER EFFECT */
 .project-card:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 40px 0 rgba(59, 130, 246, 0.15);
+    transform: translateY(-5px) scale(1.01);
+    background: rgba(0, 82, 255, 0.03); /* Leve tom azulado no fundo ao passar o mouse */
+    border-color: rgba(0, 130, 255, 0.25);
+    box-shadow: 0 24px 48px 0 rgba(0, 82, 255, 0.12);
 }
 
 .placeholder-card {
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: not-allowed;
     border-style: dashed;
+    background: rgba(255, 255, 255, 0.005);
 }
 
 /* CARD DETAILS */
 .card-icon {
-    font-size: 1.8rem;
-    background: rgba(255, 255, 255, 0.04);
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.03);
     padding: 12px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #38bdf8; /* Ícone ganha destaque em azul */
 }
 .card-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     margin-bottom: 8px;
     font-weight: 500;
+    letter-spacing: -0.3px;
 }
 .card-content p {
-    font-size: 0.88rem;
-    color: #9ca3af;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
     margin-bottom: 16px;
 }
-.tech-tag, .status-tag {
+.tech-tag {
     font-size: 0.75rem;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(0, 82, 255, 0.08);
     color: #60a5fa;
     padding: 4px 10px;
     border-radius: 8px;
     margin-right: 6px;
-    border: 1px solid rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(0, 82, 255, 0.15);
+    font-weight: 500;
 }
 .status-tag {
-    background: rgba(255, 255, 255, 0.05);
-    color: #9ca3af;
-    border-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    color: #64748b;
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* FOOTER */
 .main-footer {
     text-align: center;
-    color: #4b5563;
+    color: #475569;
     font-size: 0.8rem;
     margin-top: 20px;
 }
