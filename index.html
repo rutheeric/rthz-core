@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rthz core</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fonte Inter para consistência visual -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Esferas de fundo para dar o efeito de profundidade ao vidro -->
     <div class="bg-glow blob-1"></div>
     <div class="bg-glow blob-2"></div>
 
     <div class="container">
+        <!-- HEADER -->
         <header class="profile-header">
             <div class="avatar-container">
                 <div class="avatar"></div>
@@ -22,45 +25,45 @@
             <span class="status-badge">🟢 Online</span>
         </header>
 
+        <!-- SEÇÃO: BIO TÉCNICA EXPANDIDA -->
         <section class="glass-card bio-card">
             <div class="bio-content">
-                <h2>Engenharia & Desenvolvimento</h2>
+                <h2>Engenharia & Perfil Técnico</h2>
                 <p>
-                    Olá! Sou o **Eric Ruthes**. Desenvolvedor focado em construir soluções robustas, performáticas e estruturadas sob os princípios de arquitetura limpa (padrão MVC) e isolamento seguro de infraestrutura. Atualmente focado no ecossistema Python/Linux, gerenciando ambientes DevOps e persistência de dados relacional.
+                    Olá! Sou o **Eric Ruthes**, estudante de Ciência da Computação e desenvolvedor focado em arquitetura de software, DevOps e soluções full-stack de alto desempenho. Atuo na gerência de infraestrutura digital e automação no Gabinete da Direção-Geral do IFC Videira, onde gerencio fluxos de processos e mídias institucionais.
+                </p>
+                <p style="margin-top: -8px;">
+                    Com sólida experiência prévia como técnico de áudio e vídeo, aplico um olhar rigoroso de controle analógico e precisão no desenvolvimento de software. Atualmente, além do suporte a sistemas legados, projeto uma startup focada na automação e análise inteligente de documentos oficiais (ofícios e portarias) para a administração pública.
                 </p>
                 <div class="tech-stack-badges">
                     <span class="stack-tag">Linux (Zorin OS)</span>
-                    <span class="stack-tag">Python</span>
-                    <span class="stack-tag">Flask</span>
-                    <span class="stack-tag">PostgreSQL</span>
-                    <span class="stack-tag">DevOps</span>
+                    <span class="stack-tag">Python & Flask</span>
+                    <span class="stack-tag">GCC & C</span>
+                    <span class="stack-tag">PostgreSQL (Supabase)</span>
+                    <span class="stack-tag">DevOps & Deploy (Render/GitHub)</span>
+                    <span class="stack-tag">A/V Tech</span>
                 </div>
             </div>
         </section>
 
-        <main class="systems-grid">
+        <!-- SEÇÃO: SISTEMAS (Apenas Aplicações Ativas) -->
+        <main class="systems-grid" style="grid-template-columns: 1fr;">
             
+            <!-- Card 1: Seu PDV Atual -->
             <a href="https://tlcvendas.duckdns.org" target="_blank" class="glass-card project-card">
                 <div class="card-icon">⚡</div>
                 <div class="card-content">
                     <h3>Sistema PDV</h3>
-                    <p>Gestão de vendas integrada com arquitetura Flask e persistência de dados no Supabase (PostgreSQL).</p>
+                    <p>Plataforma robusta para gestão de vendas e frente de caixa. Desenvolvida sob o padrão arquitetural MVC com o ecossistema Python/Flask hospedado no Render, integrada a um banco de dados relacional PostgreSQL gerenciado de forma isolada via variáveis de ambiente no Supabase.</p>
                     <span class="tech-tag">Flask</span>
                     <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Render</span>
                 </div>
             </a>
 
-            <div class="glass-card placeholder-card">
-                <div class="card-icon">🛠️</div>
-                <div class="card-content">
-                    <h3>Próxima Aplicação</h3>
-                    <p>Análise de escopo e arquitetura de microsserviços em andamento.</p>
-                    <span class="status-tag">Em breve</span>
-                </div>
-            </div>
-
         </main>
 
+        <!-- FOOTER -->
         <footer class="main-footer">
             <p>&copy; 2026 rthz. Todos os direitos reservados.</p>
             <p style="margin-top: 4px; font-weight: 300; opacity: 0.8;">Desenvolvido por Eric Ruthes.</p>
