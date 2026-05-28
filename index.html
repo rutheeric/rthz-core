@@ -5,32 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rthz core</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fonte Inter para consistência visual -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Esferas de fundo para dar o efeito de profundidade ao vidro -->
     <div class="bg-glow blob-1"></div>
     <div class="bg-glow blob-2"></div>
 
     <div class="container">
-        <!-- HEADER INSTITUCIONAL -->
         <header class="profile-header">
-            <div class="avatar-container">
-                <div class="avatar"></div>
+            <div class="logo-container">
+                <svg class="rthz-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d2ff" />
+                            <stop offset="100%" stop-color="#0052ff" />
+                        </linearGradient>
+                        <linearGradient id="glassBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+                            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+                        </linearGradient>
+                        <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+                    
+                    <polygon points="50,22 78,70 22,70" fill="#002575" opacity="0.4" transform="translate(0, 3)" />
+                    
+                    <polygon points="50,22 78,70 22,70" fill="url(#coreGrad)" filter="url(#neonGlow)" />
+                    
+                    <polygon points="50,40 66,66 34,66" fill="#060913" />
+                    
+                    <path d="M50,22 L78,70 L66,66 L50,40 Z" fill="#ffffff" opacity="0.15" />
+
+                    <circle cx="50" cy="53" r="42" fill="rgba(255, 255, 255, 0.01)" stroke="url(#glassBorder)" stroke-width="1.5" />
+                </svg>
             </div>
             <h1>rthz core</h1>
             <p class="subtitle">Enterprise Systems & High-Performance Architecture</p>
             <span class="status-badge">🟢 Cluster Online</span>
         </header>
 
-        <!-- SEÇÃO: SOBRE A EMPRESA -->
         <section class="glass-card bio-card">
             <div class="bio-content">
                 <h2>Sobre a rthz</h2>
                 <p>
-                    A rthz é uma iniciativa focada no desenvolvimento de infraestrutura digital, engenharia de software e automação de processos. Projetamos e operamos aplicações sob rígidos padrões de arquitetura limpa, isolamento seguro de ambientes e persistência de dados de alta disponibilidade, entregando soluções inteligentes o ecossistema privado.
+                    A rthz é uma initiative focada no desenvolvimento de infraestrutura digital, engenharia de software e automação de processos. Projetamos e operamos aplicações sob rígidos padrões de arquitetura limpa, isolamento seguro de ambientes e persistência de dados de alta disponibilidade, entregando soluções inteligentes para o ecossistema privado.
                 </p>
                 <div class="tech-stack-badges">
                     <span class="stack-tag">Cloud Infrastructure</span>
@@ -41,12 +62,10 @@
             </div>
         </section>
 
-        <!-- SEÇÃO ESPECÍFICA PARA PROJETOS -->
         <section class="projects-section">
             <h2 class="section-title">Sistemas Ativos</h2>
             
             <main class="systems-grid" style="grid-template-columns: 1fr;">
-                <!-- Card 1: Sistema PDV -->
                 <a href="https://tlcvendas.duckdns.org" target="_blank" class="glass-card project-card">
                     <div class="card-icon">⚡</div>
                     <div class="card-content">
@@ -60,7 +79,6 @@
             </main>
         </section>
 
-        <!-- FOOTER -->
         <footer class="main-footer">
             <p>&copy; 2026 rthz. Todos os direitos reservados.</p>
             <p style="margin-top: 4px; font-weight: 300; opacity: 0.8;">Desenvolvido por Eric Ruthes de Lima.</p>

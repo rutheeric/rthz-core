@@ -58,14 +58,37 @@ body {
     align-items: center;
     gap: 14px;
 }
-.avatar {
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0052ff, #00d2ff); /* Gradiente nos tons do tema */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(0, 82, 255, 0.2);
+
+/* LOGO CONTAINER & ANIMATION (Substituiu a antiga classe .avatar) */
+.logo-container {
+    width: 96px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 8px;
 }
+
+.rthz-logo {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 8px 24px rgba(0, 82, 255, 0.25));
+    animation: logoPulse 4s ease-in-out infinite;
+}
+
+/* Animação estilo breathing para a identidade visual */
+@keyframes logoPulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0px 8px 24px rgba(0, 82, 255, 0.25));
+    }
+    50% {
+        transform: translateY(-4px) scale(1.02);
+        filter: drop-shadow(0px 12px 32px rgba(0, 210, 255, 0.4));
+    }
+}
+
 .profile-header h1 {
     font-size: 2.2rem;
     font-weight: 600;
@@ -90,13 +113,29 @@ body {
     backdrop-filter: blur(8px);
 }
 
-/* GRID & GLASSMORPHISM CORE */
+/* SEÇÃO DE PROJETOS & GRID */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #64748b;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
 .systems-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
 }
 
+/* GLASSMORPHISM CORE */
 .glass-card {
     background: rgba(255, 255, 255, 0.01); /* Transparência de alta fidelidade */
     backdrop-filter: blur(24px) saturate(190%);
@@ -175,6 +214,7 @@ body {
     font-size: 0.8rem;
     margin-top: 20px;
 }
+
 /* ESTILIZAÇÃO DA BIO CARD */
 .bio-card {
     flex-direction: column;
